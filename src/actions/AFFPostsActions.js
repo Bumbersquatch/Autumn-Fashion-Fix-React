@@ -27,7 +27,7 @@ function fetchPostsError(error) {
 export function fetchPosts(page, numPosts) {
     return dispatch => {
         dispatch(fetchPostsPending());
-        fetch(`http://private-cc77e-aff.apiary-mock.com/posts?page=${page}&numPosts=${numPosts}`)
+        fetch(`https://private-cc77e-aff.apiary-mock.com/posts?page=${page}&numPosts=${numPosts}`)
         .then(res => res.json())
         .then(res => {
 
