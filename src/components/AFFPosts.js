@@ -84,7 +84,10 @@ const AFFPosts = () => {
 
     const updateLayout = () => {
         if(msnry.current){ 
-            msnry.current.masonry.layout();
+            setTimeout(() => {
+                msnry.current.masonry.reloadItems();
+                msnry.current.masonry.layout();
+            }, 100);
         }
     }
 

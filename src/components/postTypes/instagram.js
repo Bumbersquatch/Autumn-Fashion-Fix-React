@@ -48,7 +48,7 @@ const Instagram = (props) => {
                 <LazyLoadImage
                     className="card-img-top img-fluid"
                     alt={post.item_name}
-                    src={post.item_data.link + 'media/?size=l'} // use normal <img> attributes as props
+                    src={post.item_data.link + 'media/?size=l'}
                     afterLoad={layout}
                 />
             </a>

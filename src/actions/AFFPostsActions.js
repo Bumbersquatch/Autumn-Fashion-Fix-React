@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 //Action types - could be in their own file and import them in
 export const FETCH_POSTS_PENDING = 'FETCH_POSTS_PENDING';
 export const FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS';
@@ -32,8 +34,8 @@ export function fetchPosts(page, numPosts) {
         .then(res => {
 
             res['items'].sort(function (a, b) {
-                const dateA = new Date(a.item_published),
-                    dateB = new Date(b.item_published);
+                const dateA = moment(a.item_published),
+                    dateB = moment(b.item_published);
                 return dateB - dateA;
             });
 
