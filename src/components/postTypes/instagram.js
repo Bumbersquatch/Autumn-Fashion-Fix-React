@@ -1,9 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import reactStringReplace from 'react-string-replace';
 import moment from 'moment';
+import Img from 'react-cool-img';
+
+
 
 
 const parseTweet = (text) => {
@@ -39,17 +41,19 @@ const parseTweet = (text) => {
 
 const Instagram = (props) => {
     const post = props.post;
-    const layout = props.layout;
+    const layout = () => {
+        props.layout(); 
+    }
     return (
     <article key={post.item_id} className="col-12 col-md-6 col-lg-4 grid-item instagram-post">
         <div className="card">
             <div className="post-type"><FontAwesomeIcon icon={faInstagram} /></div>
             <a href={post.item_data.link}>
-                <LazyLoadImage
-                    className="card-img-top img-fluid"
-                    alt={post.item_name}
+                <Img
                     src={post.item_data.link + 'media/?size=l'}
-                    afterLoad={layout}
+                    className="card-img-top img-fluid"
+                    onLoad={layout}
+                    debounce={0}
                 />
             </a>
             <div className="card-block">
