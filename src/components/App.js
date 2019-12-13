@@ -23,8 +23,8 @@ const App = () => {
       <main className="container">
         <AFFPosts />
         <hr/>
-        <footer className="row">
-          <div className="col-6 credit">
+        <footer className="row credit">
+          <div className="col-6">
             <p>© Alex Ross {moment().format('YYYY')}<br/>
             <a href="https://rosso.codes">https://rosso.codes</a></p>
           </div>
