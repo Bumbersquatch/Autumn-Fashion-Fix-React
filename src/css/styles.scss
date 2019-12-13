@@ -231,3 +231,16 @@ nav.navbar.bg-dark{
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+.credit{
+    font-size: 0.85em;
+    a{
+        color: $dark-color;
+        margin-top:5px;
+        display: inline-block;
+        font-size: 24px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}

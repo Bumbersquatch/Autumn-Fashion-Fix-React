@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Img from 'react-cool-img';
+import defaultImg from '../../images/Gear-0.5s-108px.svg';
 
 const Manual = (props) => {
     const post = props.post;
@@ -16,6 +17,7 @@ const Manual = (props) => {
                 <div className="post-type">AFF</div>
                 <a href={post.item_data.link} rel="noopener noreferrer" target="_blank">
                     <Img
+                        placeholder={defaultImg}
                         src='https://placeimg.com/640/480/people'
                         className="card-img-top img-fluid"
                         onLoad={layout}

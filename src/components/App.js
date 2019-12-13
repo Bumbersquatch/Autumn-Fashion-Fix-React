@@ -3,7 +3,7 @@ import '../css/app.scss';
 import AFFCarousel from './AFFCarousel';
 import AFFPosts from './AFFPosts';
 import moment from 'moment';
-
+import logo from '../images/logo192.png';
 
 const App = () => {
   const [loaded, setLoaded] = useState(false)
@@ -23,8 +23,14 @@ const App = () => {
       <main className="container">
         <AFFPosts />
         <hr/>
-        <footer>
-        <p>© Alex Ross {moment().format('YYYY')}</p>
+        <footer className="row">
+          <div className="col-6 credit">
+            <p>© Alex Ross {moment().format('YYYY')}<br/>
+            <a href="https://rosso.codes">https://rosso.codes</a></p>
+          </div>
+          <div className="col-6">
+            <p className="text-right"><img className="w-25" src={logo} alt="Logo" /></p>
+          </div>
         </footer>
       </main>
     </div>

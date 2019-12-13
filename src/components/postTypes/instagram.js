@@ -4,6 +4,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import reactStringReplace from 'react-string-replace';
 import moment from 'moment';
 import Img from 'react-cool-img';
+import defaultImg from '../../images/Gear-0.5s-108px.svg';
 
 
 
@@ -44,12 +45,14 @@ const Instagram = (props) => {
     const layout = () => {
         props.layout(); 
     }
+    
     return (
     <article key={post.item_id} className="col-12 col-md-6 col-lg-4 grid-item instagram-post">
         <div className="card">
             <div className="post-type"><FontAwesomeIcon icon={faInstagram} /></div>
             <a href={post.item_data.link}>
                 <Img
+                    placeholder={defaultImg}
                     src={post.item_data.link + 'media/?size=l'}
                     className="card-img-top img-fluid"
                     onLoad={layout}
