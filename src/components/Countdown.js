@@ -36,7 +36,7 @@ const Countdown = (props) => {
         }
 	}, [props, clockItem])
 
-	const daysRadius = mapNumber(days, 30, 0, 0, 360);
+	const daysRadius = mapNumber(days, 365, 0, 0, 360);
 	const hoursRadius = mapNumber(hours, 24, 0, 0, 360);
 	const minutesRadius = mapNumber(minutes, 60, 0, 0, 360);
 	const secondsRadius = mapNumber(seconds, 60, 0, 0, 360);
