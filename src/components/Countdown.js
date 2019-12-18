@@ -100,7 +100,7 @@ const SVGCircle = ({ item, radius }) => {
     const cdidiameter = item / 2
     return (
 	<svg className='countdown-svg'>
-		<path fill="none" stroke={variables.accentcolor} strokeWidth="4" d={describeArc(cdidiameter, cdidiameter, cdidiameter-2, 0, radius)}/>
+		<path fill="none" stroke={variables.accentcolor} strokeWidth="4" d={describeArc(cdidiameter, cdidiameter, cdidiameter-2.8, 0, radius)}/>
 	</svg>
     )
 }
@@ -124,7 +124,7 @@ function describeArc(x, y, radius, startAngle, endAngle){
 
     var d = [
         "M", start.x, start.y, 
-        "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+        "A", radius, radius, 0, largeArcFlag, 0, end.x + 0.1, end.y
     ].join(" ");
 
     return d;       
